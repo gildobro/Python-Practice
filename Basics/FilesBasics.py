@@ -2,6 +2,7 @@
 #read from an existing file
 with open("files/fruits.txt", "r") as myfile:
     content = myfile.read()
+    myfile.close()
 
 print(content)
 
@@ -9,6 +10,7 @@ print(content)
 with open("files/vegetables.txt", "w") as myfile:
     myfile.write("Pepper\nCucumber\nOnion\nTomato")
     myfile.write("\nGarlic")
+    myfile.close()
 '''
 
 #append content to the end of a file and '+' for reading
@@ -17,5 +19,6 @@ with open("files/vegetables.txt", "a+") as myfile:
     #the seek method moves the cursor to point 0
     myfile.seek(0)
     content = myfile.read()
+    myfile.close()
 
 print(content)
