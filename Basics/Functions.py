@@ -1,4 +1,4 @@
-'''
+
 #the len() method outputs the amount of characters that a string has
 #can only take one argument
 print(len('stefonapodopoulous'))
@@ -10,7 +10,7 @@ print(len('stefonapodopoulous'))
 print(isinstance(11,int))
 print(isinstance(13, float))
 print(isinstance("hello", str))
-print(isinstance(1,3,int))
+#print(isinstance(1,3,int))
 #output1 = True
 #output2 = False
 #output3 = True
@@ -21,7 +21,7 @@ def mean(*args):
     print(len(args))
     return sum(args) / len(args)
 print(mean(1,3, 7, 5.3, 12))
-
+'''
 #keyword arguments
 def mean(**kwargs):
     return kwargs
