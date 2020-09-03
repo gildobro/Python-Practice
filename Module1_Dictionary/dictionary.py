@@ -1,7 +1,7 @@
 import json
 from difflib import get_close_matches
 
-data = json.load(open("Module1_Dictionary/data.json"))
+data = json.load(open("Module1_Dictionary/dictionary.json"))
 
 def translate(word):
     #set variable to match lowercases in JSON file
@@ -18,7 +18,7 @@ def translate(word):
             return data[get_close_matches(word, data.keys())[0]]
         #checks the no condition
         elif (answer == "N" or answer == "n" or answer == "no" or answer == "No"):
-            return "Sorry, but the word you are looking for doesn't exist. Please double check it"
+            return "\nSorry, but the word you are looking for doesn't exist. Please double check it"
         #checks for any random string input
         else:
             return "We didn't understand your entry."
