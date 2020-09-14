@@ -1,30 +1,37 @@
 import mysql.connector
+from difflib import get_close_matches
+from dictionary import translate
 
 con = mysql.connector.connect(
-user = "root",
-password = "G1ly@2001",
-host = "localhost",
-database = "python_practice"
+user = "ardit700_student",
+password = "ardit700_student",
+host = "108.167.140.122",
+database = "ardit700_pm1database"
 )
 
 cursor = con.cursor()
 
-#word = input("Enter a word: ")
+word = input("\nEnter a word: ")
 
-query = cursor.execute("SELECT * FROM dictionary")#WHERE Expression = '%s' " % word)
+output = translate(word)
+
+if type(output) == list:
+    for item in output:
+        print("\nDefinition: ")
+        print(item)
+else:
+    print(output)
+
+query = cursor.execute("SELECT * FROM Dictionary WHERE Expression = '%s' " % word)
 results = cursor.fetchall()
 
 print(results)
 
-#if results:
-    #for result in results:
-        #print(result[])
-#else:
-    #print("No word found!")
 
-'''
-user = "ardit700_student",
-password = "ardit700_student",
-host = "108.167.140.122",
-database = "ardit700_pn1database"
-'''
+#Why even when I comment this out, I still get [] from no words found?
+
+if results:
+    for result in results:
+        print(result[1])
+else:
+    print("No word found!")
