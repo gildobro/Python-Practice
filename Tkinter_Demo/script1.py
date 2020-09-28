@@ -16,4 +16,10 @@ e1.grid(row=0,column=1)
 t1=Text(window,height=1,width=20)
 t1.grid(row=0,column=2)
 
+l1 = Label(window,text="Km")
+l1.grid(row=1,column = 1)
+
+l2 = Label(window, text="miles")
+l2.grid(row=1,column = 2)
+
 window.mainloop()
