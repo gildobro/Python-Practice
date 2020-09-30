@@ -22,7 +22,7 @@ def from_kg():
     t3.insert(END, ounces)
 
 # Create a Label widget with "Kg" as label
-e1 = Label(window,text="Kg")
+e1 = Label(window,text="Enter an amount (in Kg):")
 e1.grid(row=0,column=0) # The Label is placed in position 0, 0 in the window
 
 e2_value = StringVar() # Create a special StringVar object
